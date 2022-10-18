@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Cards = (props) => {
+const Scores = (props) => {
   return (
     <div></div>
   )
 }
 
-export default Cards
+export default Scores
