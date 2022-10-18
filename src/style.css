@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* background image from https://www.fightersgeneration.com/games/sfa3-p5-7.html */
+/* sprite gifs from https://streetfighter.fandom.com/wiki/Street_Fighter_Alpha_3 */
+
 .root{
     box-sizing: border-box;
 }
