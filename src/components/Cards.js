@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react'
 import uniqid from 'uniqid'
 
-const Cards = ({order, currentScore, selected, addSelected, incrementScore, updateHS, resetScore, shuffle}) => {
+const Cards = ({resetSelected, order, currentScore, selected, addSelected, incrementScore, updateHS, resetScore, shuffle}) => {
     useEffect(()=>{   
         shuffle();
-    },[currentScore]);
-    useEffect(()=>{
         updateHS();
-    },[currentScore])
+    },[currentScore]);
 
     const onClick = (card) =>{
         if(!selected.includes(card)){
             addSelected(card);
             incrementScore();
         }else{
+            resetSelected();
             resetScore();
         };
     };

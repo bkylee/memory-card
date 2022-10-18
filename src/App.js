@@ -17,6 +17,10 @@ const App = () =>{
         setCurrentScore(0);
     }
 
+    const resetSelected =()=>{
+        setSelected([]);
+    }
+
     const shuffle = ()=>{
         let newArr= cards.length, t, i;
         while (newArr){
@@ -42,7 +46,7 @@ const App = () =>{
     return(
         <>
         <Scores currentScore={currentScore} highscore={highscore}  />
-        <Cards setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} resetScore={resetScore} currentScore={currentScore} updateHS={updateHS}/> 
+        <Cards setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} resetScore={resetScore} currentScore={currentScore} updateHS={updateHS} resetSelected={resetSelected}/> 
         </>
         )
 }
