@@ -36,7 +36,7 @@ const App = () =>{
     const updateHS = ()=>{
         if (currentScore > highscore){
             setHighScore(currentScore);
-        };
+        }else{setHighScore(highscore)}
     };
 
     return(
