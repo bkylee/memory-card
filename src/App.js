@@ -5,6 +5,7 @@ import Scores from "./components/Scores";
 const App = () =>{
     let cards = [1,2,3,4,5,6,7,8,9,10];
     const [order, setOrder] = useState(()=>cards);
+    const [selected, setSelected] = useState(()=>[]);
     const [currentScore, setCurrentScore] = useState(()=>0);
     const [highscore, setHighScore] = useState(()=>0);
 
@@ -13,7 +14,7 @@ const App = () =>{
     }
 
     const resetScore = () =>{
-        setCurrentScore(currentScore = 0);
+        setCurrentScore(0);
     }
 
     const shuffle = ()=>{
@@ -28,10 +29,22 @@ const App = () =>{
         setOrder(cards);
     }
 
+    const addSelected = (card) =>{
+        setSelected(prevArr => prevArr.concat(card));
+    }
+
+    const updateHS = ()=>{
+        if (currentScore > highscore){
+            setHighScore(currentScore);
+        };
+    };
+
     return(
         <>
-        <Scores currentScore={currentScore} setCurrentScore={setCurrentScore} highscore={highscore} setHighScore={setHighScore} incrementScore={incrementScore} resetScore={resetScore} />
-        <Cards setOrder={setOrder} order={order} shuffle={shuffle} /> 
+        <Scores currentScore={currentScore} highscore={highscore}  />
+        <Cards setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} resetScore={resetScore} currentScore={currentScore} updateHS={updateHS}/> 
         </>
         )
 }
+
+export default App

@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Scores = (props) => {
+const Scores = ({currentScore, highscore}) => {
   return (
-    <div></div>
+    <>
+    <h2>{currentScore}</h2>
+    <h2>{highscore}</h2>
+    </>
   )
 }
 
