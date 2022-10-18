@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.4143bb37.css",
+    "main.js": "/memory-card/static/js/main.832f359f.js",
+    "static/media/sfa3-guy-stage.gif": "/memory-card/static/media/sfa3-guy-stage.4552cdbcf7fd6cb456c5.gif",
+    "static/media/Sf-birdie.gif": "/memory-card/static/media/Sf-birdie.e396e17ff272c5731123.gif",
+    "static/media/Akuma4.webp": "/memory-card/static/media/Akuma4.7822eb314a1b65e6337a.webp",
+    "static/media/Dhalsim.webp": "/memory-card/static/media/Dhalsim.456460ca2d93f134236d.webp",
+    "static/media/Sf-gen.webp": "/memory-card/static/media/Sf-gen.ae14dd9023dd2c2a7358.webp",
+    "static/media/Sf-charlie2.webp": "/memory-card/static/media/Sf-charlie2.7747ffdab5624d79f8a8.webp",
+    "static/media/Ken2.webp": "/memory-card/static/media/Ken2.8f6fd830a646a7517d0f.webp",
+    "static/media/Dan-alpha2standing.webp": "/memory-card/static/media/Dan-alpha2standing.319a58c5a93adc2d31f1.webp",
+    "static/media/Sf-adon.webp": "/memory-card/static/media/Sf-adon.bbdf41ce58976302cefb.webp",
+    "static/media/Guy-stance.webp": "/memory-card/static/media/Guy-stance.8504c56845c5cdd12e1c.webp",
+    "static/media/Sf-chunli.webp": "/memory-card/static/media/Sf-chunli.c6e39ef25dc65bcf480b.webp",
+    "index.html": "/memory-card/index.html",
+    "main.4143bb37.css.map": "/memory-card/static/css/main.4143bb37.css.map",
+    "main.832f359f.js.map": "/memory-card/static/js/main.832f359f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4143bb37.css",
+    "static/js/main.832f359f.js"
+  ]
+}
