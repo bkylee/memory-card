@@ -1,26 +1,25 @@
 import React, { useEffect } from 'react'
 import uniqid from 'uniqid'
 
-const Cards = ({resetSelected, order, currentScore, selected, addSelected, incrementScore, updateHS, resetScore, shuffle}) => {
+const Cards = ({toggleEnd, order, currentScore, selected, addSelected, incrementScore, updateHS, shuffle}) => {
     useEffect(()=>{   
         shuffle();
         updateHS();
     },[currentScore]);
-
+    
     const onClick = (card) =>{
         if(!selected.includes(card)){
             addSelected(card);
             incrementScore();
         }else{
-            resetSelected();
-            resetScore();
+            toggleEnd();
         };
     };
 
     let output = order.map(card=> 
-        <button type='button' key={uniqid()} onClick={()=>onClick(card)}>{card}</button>);
+        <div key={uniqid()} id={card} className="cards" onClick={()=>onClick(card)}>{card}</div>);
   return (
-    <div>{output}</div>
+    <div id='cardWrap'>{output}</div>
   )
 }
 

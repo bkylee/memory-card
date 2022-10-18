@@ -1,13 +1,30 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Cards from "./components/Cards";
+import Endscreen from "./components/Endscreen";
+import Header from "./components/Header";
 import Scores from "./components/Scores";
 
 const App = () =>{
-    let cards = [1,2,3,4,5,6,7,8,9,10];
+    let cards = ['Adon','Dan','Akuma','Dhalsim','Guy','Ken','Birdie','Charlie','ChunLi','Gen'];
     const [order, setOrder] = useState(()=>cards);
     const [selected, setSelected] = useState(()=>[]);
     const [currentScore, setCurrentScore] = useState(()=>0);
     const [highscore, setHighScore] = useState(()=>0);
+    const [end, setEnd] = useState(()=> false);
+
+    const toggleEnd = ()=>{
+        if(end){
+            setEnd(false)
+        }else{
+            setEnd(true)
+        };
+    };
+
+    const endClick = () =>{
+        toggleEnd();
+        resetSelected();
+        resetScore();
+    }
 
     const incrementScore = ()=>{
         setCurrentScore(prevScore => prevScore + 1);
@@ -43,11 +60,14 @@ const App = () =>{
         }else{setHighScore(highscore)}
     };
 
+
     return(
-        <>
+        <div id="wrap">
+        <Header />
         <Scores currentScore={currentScore} highscore={highscore}  />
-        <Cards setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} resetScore={resetScore} currentScore={currentScore} updateHS={updateHS} resetSelected={resetSelected}/> 
-        </>
+        <Cards toggleEnd={toggleEnd} end={end} setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} currentScore={currentScore} updateHS={updateHS}/> 
+        {end ? <Endscreen resetScore={resetScore} endClick={endClick} currentScore={currentScore} highscore={highscore} /> : null}
+        </div>
         )
 }
 
