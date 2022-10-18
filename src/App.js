@@ -30,8 +30,8 @@ const App = () =>{
 
     return(
         <>
-        <Scores currentScore={currentScore} setCurrentScore={setCurrentScore} highscore={highscore} setHighScore={setHighScore} />
-        <Cards setOrder={setOrder} order={order} /> 
+        <Scores currentScore={currentScore} setCurrentScore={setCurrentScore} highscore={highscore} setHighScore={setHighScore} incrementScore={incrementScore} resetScore={resetScore} />
+        <Cards setOrder={setOrder} order={order} shuffle={shuffle} /> 
         </>
         )
 }
