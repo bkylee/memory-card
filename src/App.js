@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>{
+    let cards = [1,2,3,4,5,6,7,8,9,10];
+    const [order, setOrder] = useState(()=>cards);
+    const [currentScore, setCurrentScore] = useState(()=>0);
+    const [highscore, setHighScore] = useState(()=>0);
+
+    const incrementScore = ()=>{
+        setCurrentScore(prevScore => prevScore + 1);
+    }
+
+    const resetScore = () =>{
+        setCurrentScore(currentScore = 0);
+    }
+
 }
-
-export default App;
