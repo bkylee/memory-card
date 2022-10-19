@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Cards from "./components/Cards";
 import Endscreen from "./components/Endscreen";
 import Header from "./components/Header";
+import Howto from "./components/Howto";
 import Scores from "./components/Scores";
 
 const App = () =>{
@@ -66,7 +67,9 @@ const App = () =>{
         <Header />
         <Scores currentScore={currentScore} highscore={highscore}  />
         <Cards toggleEnd={toggleEnd} end={end} setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} currentScore={currentScore} updateHS={updateHS}/> 
+        <Howto />
         {end ? <Endscreen resetScore={resetScore} endClick={endClick} currentScore={currentScore} highscore={highscore} /> : null}
+        
         </div>
         )
 }
