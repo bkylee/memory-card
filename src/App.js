@@ -4,6 +4,7 @@ import Endscreen from "./components/Endscreen";
 import Header from "./components/Header";
 import Howto from "./components/Howto";
 import Scores from "./components/Scores";
+import Winscreen from "./components/Winscreen";
 
 const App = () =>{
     let cards = ['Adon','Dan','Akuma','Dhalsim','Guy','Ken','Birdie','Charlie','ChunLi','Gen'];
@@ -69,7 +70,7 @@ const App = () =>{
         <Cards toggleEnd={toggleEnd} end={end} setOrder={setOrder} order={order} shuffle={shuffle} addSelected={addSelected} selected={selected} incrementScore={incrementScore} currentScore={currentScore} updateHS={updateHS}/> 
         <Howto />
         {end ? <Endscreen resetScore={resetScore} endClick={endClick} currentScore={currentScore} highscore={highscore} /> : null}
-        
+        {currentScore === 10 ? <Winscreen endClick={endClick}/> : null}
         </div>
         )
 }

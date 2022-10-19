@@ -2,7 +2,7 @@ import React from 'react'
 
 const Endscreen = ({endClick, currentScore, highscore}) => {
   return (
-    <div id='endWrap'>
+    <div className='endWrap'>
         <div id='defeat'>Defeat!</div>
     <h1>Your score was: {currentScore}</h1>
     <br></br>
